@@ -7,4 +7,8 @@ export default defineConfig({
     port: 5173,
     open: true,
   },
+  preview: {
+    // Allow Render's *.onrender.com host to reach the preview server
+    allowedHosts: true,
+  },
 })
