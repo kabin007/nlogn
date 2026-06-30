@@ -1,0 +1,78 @@
+.section-head {
+  max-width: 760px;
+  margin-bottom: clamp(48px, 7vw, 84px);
+}
+.section-head .eyebrow {
+  margin-bottom: 22px;
+}
+.section-title {
+  font-size: clamp(1.9rem, 4.6vw, 3.4rem);
+  text-transform: none;
+  margin-bottom: 24px;
+  color: #fff;
+}
+.mono-accent {
+  font-family: var(--font-mono);
+  color: var(--blue-bright);
+  letter-spacing: 0.06em;
+}
+
+.concept {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+}
+
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.concept-card {
+  padding: 38px 32px 34px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.concept-card__glyph {
+  height: 64px;
+  margin-bottom: 28px;
+}
+.concept-card__glyph .concept-glyph {
+  height: 100%;
+  width: auto;
+}
+.concept-card__index {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--fg-dim);
+  letter-spacing: 0.1em;
+}
+.concept-card__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.concept-card__lead {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--blue-bright);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.concept-card__body {
+  color: var(--fg-muted);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .concept-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+}

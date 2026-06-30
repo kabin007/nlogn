@@ -1,0 +1,77 @@
+/* ---- Mark ---- */
+.logo-mark {
+  height: auto;
+  width: 100%;
+  color: #fff;
+  filter: drop-shadow(0 6px 30px rgba(31, 111, 255, 0.18));
+}
+
+/* ---- Wordmark (NLOGN) ---- */
+.wordmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  /* spacing + sizing driven by font-size on the parent lockup */
+}
+
+.wordmark > span {
+  letter-spacing: 0.18em;
+  margin-right: 0.18em;
+}
+
+/* the custom "O" node: blue-outlined pill with a blue bar through it */
+.wordmark .word-o {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.18em;
+  height: 0.82em;
+  margin-right: 0.18em;
+  border: 0.14em solid var(--blue);
+  border-radius: 999px;
+  box-shadow: 0 0 18px -2px var(--blue-glow);
+}
+.wordmark .word-o i {
+  width: 52%;
+  height: 0.14em;
+  background: var(--blue);
+  border-radius: 999px;
+}
+
+/* ---- Tagline ---- */
+.logo-tagline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: clamp(0.6rem, 1.1vw, 0.82rem);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.logo-tagline em {
+  width: 1px;
+  height: 14px;
+  background: var(--blue);
+  display: inline-block;
+}
+
+/* ---- Full lockup ---- */
+.logo-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(14px, 2.4vw, 26px);
+}
+.logo-lockup .logo-mark {
+  width: clamp(280px, 46vw, 560px);
+}
+.logo-lockup .wordmark {
+  font-size: clamp(2.2rem, 7vw, 5rem);
+}

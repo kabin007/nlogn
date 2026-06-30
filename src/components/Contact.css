@@ -1,0 +1,186 @@
+.contact {
+  position: relative;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  overflow: hidden;
+}
+.contact__glow {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 60%;
+  height: 70%;
+  background: radial-gradient(circle, var(--blue-haze), transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.contact__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+
+.contact__left .eyebrow {
+  margin-bottom: 22px;
+}
+.contact__title {
+  font-size: clamp(1.9rem, 4.4vw, 3.2rem);
+  text-transform: none;
+  color: #fff;
+  margin-bottom: 22px;
+}
+.contact__points {
+  list-style: none;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.contact__points li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--fg);
+  font-size: 0.96rem;
+}
+.contact__points li::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: rgba(31, 111, 255, 0.15);
+  border: 1px solid var(--blue);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234d94ff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 4 4 10-10'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+}
+.contact__direct {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  color: var(--fg-muted);
+  margin-top: 10px;
+}
+.contact__direct a {
+  color: var(--blue-bright);
+  transition: color 0.2s var(--ease);
+}
+.contact__direct a:hover {
+  color: var(--blue-soft);
+}
+
+/* ---- Card / form ---- */
+.contact__card {
+  padding: clamp(28px, 4vw, 40px);
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.field label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--line-strong);
+  border-radius: 11px;
+  padding: 14px 16px;
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239aa3b2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px;
+  cursor: pointer;
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--fg-dim);
+}
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-haze);
+}
+.field--error input,
+.field--error textarea {
+  border-color: #ff5470;
+}
+.field__error {
+  font-size: 0.8rem;
+  color: #ff8097;
+}
+
+.contact__submit {
+  margin-top: 6px;
+  width: 100%;
+}
+.contact__fineprint {
+  font-size: 0.76rem;
+  color: var(--fg-dim);
+  text-align: center;
+}
+
+/* ---- Success ---- */
+.contact__success {
+  text-align: center;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.contact__success-mark {
+  width: 120px;
+  margin-bottom: 6px;
+}
+.contact__success h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.contact__success p {
+  color: var(--fg-muted);
+  max-width: 36ch;
+}
+.contact__success .btn {
+  margin-top: 10px;
+}
+
+@media (max-width: 880px) {
+  .contact__inner {
+    grid-template-columns: 1fr;
+  }
+}
